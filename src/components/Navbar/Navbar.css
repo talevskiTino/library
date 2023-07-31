@@ -1,0 +1,134 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  height: 60px;
+  padding: 0 20px;
+}
+
+.navbar__logo {
+  max-height: 40px;
+}
+
+.navbar__logo a {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.form {
+  flex: 1;
+  text-align: center;
+}
+
+.form__input-text {
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form__button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form__button:hover {
+  background-color: #0056b3;
+}
+
+.dropdown {
+  position: relative;
+  display: block;
+  margin: 5px;
+  text-align: left;
+}
+
+.dropdown__btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.dropdown__btn:hover {
+  background-color: #0056b3;
+}
+
+.dropdown__arrow {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown__btn--open .dropdown__arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown__content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  min-width: 250px;
+  top: 40px;
+  left: 0;
+}
+
+.dropdown__item {
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown__item:hover {
+  background-color: #ddd;
+}
+
+.dropdown__content--show {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 5px;
+    height: auto;
+    align-items: start;
+    justify-content: space-around;
+  }
+
+  .navbar__logo-img {
+    margin-bottom: 10px;
+  }
+
+  .form {
+    text-align: end;
+    flex: inherit;
+  }
+
+  .dropdown {
+    margin: 0;
+  }
+
+  .dropdown__btn {
+    width: 100%;
+    padding: 8px 8px;
+  }
+
+  .dropdown__content {
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: initial;
+  }
+}
